@@ -1,7 +1,7 @@
 <div class="d-flex flex-column border w-100 h-100">
-  <div style="height:30px">{{container.label}}</div>
-  <as-split class="flex-fill" direction="horizontal">
-    <as-split-area *ngFor="let card of container.cards">
+  <div class="text-primary" style="height:30px">{{container.label}}</div>
+  <as-split class="flex-fill">
+    <as-split-area *ngFor="let card of container.cards" [size]="card.width">
       <app-card [card]="card"></app-card>
     </as-split-area>
   </as-split>
