@@ -1,0 +1,13 @@
+<as-split class="border" direction="vertical">
+  <as-split-area class="d-flex flex-column">
+    <div style="height:30px">{{card.label}}</div>
+    <div class="flex-fill">CONTENT</div>
+  </as-split-area>
+  <as-split-area *ngIf="card.containers">
+    <as-split direction="horizontal">
+      <as-split-area *ngFor="let container of card.containers">
+        <app-container [container]="container"></app-container>
+      </as-split-area>
+    </as-split>
+  </as-split-area>
+</as-split>
