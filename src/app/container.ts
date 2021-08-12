@@ -20,7 +20,7 @@ export class Container {
       this.cards = this.cards.filter(f => f !== card);
       if (this.cards.length <= 0) {
         this.cards = undefined;
-        this.parent.removeContainer(this);
+        this.parent?.removeContainer(this);
       }
     }
   }
