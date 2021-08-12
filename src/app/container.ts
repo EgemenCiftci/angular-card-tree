@@ -1,7 +1,6 @@
 import { Card } from './card';
 
 export class Container {
-  height: number;
   width: number;
 
   constructor(public label?: string, public cards?: Card[]) {}
