@@ -1,6 +1,9 @@
 <as-split class="border" direction="vertical">
   <as-split-area class="d-flex flex-column" [size]="card.height">
-    <div class="text-secondary" style="height:30px">{{card.label}}</div>
+    <div class="text-secondary d-flex" style="height:30px">
+      <span class="flex-fill">{{card.label}}</span>
+      <button (click)="card.parent.removeCard(card)">X</button>
+    </div>
     <div class="flex-fill border d-flex align-items-center justify-content-center">CONTENT</div>
   </as-split-area>
   <as-split-area *ngIf="card.containers">

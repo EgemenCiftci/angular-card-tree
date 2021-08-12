@@ -1,6 +1,9 @@
 <div class="d-flex flex-column border w-100 h-100">
-  <div class="text-primary" style="height:30px">{{container.label}}</div>
-  <as-split class="flex-fill">
+  <div class="text-primary d-flex" style="height:30px">
+    <span class="flex-fill">{{container.label}}</span>
+    <button (click)="container.parent.removeContainer(container)">X</button>
+  </div>
+  <as-split class="flex-fill" *ngIf="container.cards">
     <as-split-area *ngFor="let card of container.cards" [size]="card.width">
       <app-card [card]="card"></app-card>
     </as-split-area>
