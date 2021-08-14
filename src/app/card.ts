@@ -6,7 +6,7 @@ export class Card {
   parent: Container;
   containers: Container[];
 
-  constructor(public label?: string) {}
+  constructor(public label?: string, public content?: string) {}
 
   addContainer(container: Container) {
     if (!this.containers) {

@@ -5,7 +5,7 @@
       <button (click)="addContainer()" title="Add Container">+</button>
       <button (click)="card.parent.removeCard(card)" title="Remove Card">X</button>
     </div>
-    <div class="flex-fill border d-flex align-items-center justify-content-center">CONTENT</div>
+    <div class="flex-fill border d-flex align-items-center justify-content-center">{{card.content}}</div>
   </as-split-area>
   <as-split-area *ngIf="card.containers">
     <as-split>
