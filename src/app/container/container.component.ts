@@ -15,6 +15,6 @@ export class ContainerComponent implements OnInit {
   ngOnInit() {}
 
   addCard() {
-    this.container.addCard(new Card('New Card'));
+    this.container.addCard(new Card('New Card', 'New Content'));
   }
 }
