@@ -1,8 +1,14 @@
 <div class="d-flex flex-column border w-100 h-100">
   <div class="text-primary d-flex" style="height:30px">
-    <span class="flex-fill">{{container.label}}</span>
+    <span class="flex-fill">{{ container.label }}</span>
     <button (click)="addCard()" title="Add Card">+</button>
-    <button *ngIf="container.parent" (click)="container.parent.removeContainer(container)" title="Remove Container">X</button>
+    <button
+      *ngIf="container.parent"
+      (click)="container.parent.removeContainer(container)"
+      title="Remove Container"
+    >
+      X
+    </button>
   </div>
   <as-split class="flex-fill" *ngIf="container.cards">
     <as-split-area *ngFor="let card of container.cards" [size]="card.width">

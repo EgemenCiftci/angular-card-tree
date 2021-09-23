@@ -17,7 +17,7 @@ export class Container {
 
   removeCard(card: Card) {
     if (this.cards) {
-      this.cards = this.cards.filter(f => f !== card);
+      this.cards = this.cards.filter((f) => f !== card);
       if (this.cards.length <= 0) {
         this.cards = undefined;
         this.parent?.removeContainer(this);

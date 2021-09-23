@@ -1,15 +1,24 @@
 <as-split class="border" direction="vertical">
   <as-split-area class="d-flex flex-column" [size]="card.height">
     <div class="text-secondary d-flex" style="height:30px">
-      <span class="flex-fill">{{card.label}}</span>
+      <span class="flex-fill">{{ card.label }}</span>
       <button (click)="addContainer()" title="Add Container">+</button>
-      <button (click)="card.parent.removeCard(card)" title="Remove Card">X</button>
+      <button (click)="card.parent.removeCard(card)" title="Remove Card">
+        X
+      </button>
     </div>
-    <div class="flex-fill border d-flex align-items-center justify-content-center">{{card.content}}</div>
+    <div
+      class="flex-fill border d-flex align-items-center justify-content-center"
+    >
+      {{ card.content }}
+    </div>
   </as-split-area>
   <as-split-area *ngIf="card.containers">
     <as-split>
-      <as-split-area *ngFor="let container of card.containers" [size]="container.width">
+      <as-split-area
+        *ngFor="let container of card.containers"
+        [size]="container.width"
+      >
         <app-container [container]="container"></app-container>
       </as-split-area>
     </as-split>

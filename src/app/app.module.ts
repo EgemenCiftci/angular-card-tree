@@ -10,6 +10,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   imports: [BrowserModule, FormsModule, AngularSplitModule, NgbModule],
   declarations: [AppComponent, ContainerComponent, CardComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
