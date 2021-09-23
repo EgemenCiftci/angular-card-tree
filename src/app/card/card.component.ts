@@ -16,7 +16,7 @@ export class CardComponent implements OnInit {
 
   addContainer() {
     const container = new Container('New Container');
-    container.addCard(new Card('New Card'));
+    container.addCard(new Card('New Card', 'New Content'));
     this.card.addContainer(container);
   }
 }
