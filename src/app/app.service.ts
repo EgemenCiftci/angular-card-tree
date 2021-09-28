@@ -15,14 +15,11 @@ export class AppService {
     this.container.cards[0].containers[0].addCard(
       new Card('Card 1', 'Content 1')
     );
-    this.container.cards[0].containers[0].addCard(
+    this.container.cards[0].containers[1].addCard(
       new Card('Card 2', 'Content 2')
     );
     this.container.cards[0].containers[1].addCard(
-      new Card('Card 3', 'Content 3 ')
-    );
-    this.container.cards[0].containers[1].addCard(
-      new Card('Card 4', 'Content 4')
+      new Card('Card 3', 'Content 3')
     );
   }
 }
