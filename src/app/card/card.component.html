@@ -1,6 +1,6 @@
 <as-split class="border" direction="vertical">
   <as-split-area class="d-flex flex-column" [size]="card.height">
-    <div class="text-secondary d-flex" style="height:30px">
+    <div class="text-secondary d-flex bg-blue text-white" style="height:30px">
       <span class="flex-fill">{{ card.label }}</span>
       <button (click)="addContainer()" title="Add Container">+</button>
       <button (click)="card.parent.removeCard(card)" title="Remove Card">
@@ -8,7 +8,7 @@
       </button>
     </div>
     <div
-      class="flex-fill border d-flex align-items-center justify-content-center"
+      class="flex-fill border d-flex align-items-center justify-content-center bg-white"
     >
       {{ card.content }}
     </div>
