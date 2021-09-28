@@ -4,6 +4,7 @@ export class Container {
   width: number;
   parent: Card;
   cards: Card[];
+  visible: boolean = true;
 
   constructor(public label?: string) {}
 
@@ -23,5 +24,9 @@ export class Container {
         this.parent?.removeContainer(this);
       }
     }
+  }
+
+  hide() {
+    this.visible = false;
   }
 }

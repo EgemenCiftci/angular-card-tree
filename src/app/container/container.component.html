@@ -2,6 +2,7 @@
   <div class="d-flex bg-navy text-white" style="height:30px">
     <span class="flex-fill">{{ container.label }}</span>
     <button (click)="addCard()" title="Add Card">+</button>
+    <!--button (click)="hide()" title="Hide Container">o</button-->
     <button
       *ngIf="container.parent"
       (click)="container.parent.removeContainer(container)"
@@ -11,7 +12,7 @@
     </button>
   </div>
   <as-split class="flex-fill" *ngIf="container.cards">
-    <as-split-area *ngFor="let card of container.cards" [size]="card.width">
+    <as-split-area *ngFor="let card of container.cards" [size]="card.width" [visible]="card.visible">
       <app-card [card]="card"></app-card>
     </as-split-area>
   </as-split>

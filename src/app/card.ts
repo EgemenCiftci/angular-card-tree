@@ -5,6 +5,9 @@ export class Card {
   height: number;
   parent: Container;
   containers: Container[];
+  visible = true;
+  headerVisible = true;
+  contentVisible = true;
 
   constructor(public label?: string, public content?: string) {}
 
@@ -23,5 +26,9 @@ export class Card {
         this.containers = undefined;
       }
     }
+  }
+
+  hide() {
+    this.visible = false;
   }
 }

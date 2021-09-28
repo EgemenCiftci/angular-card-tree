@@ -17,4 +17,8 @@ export class ContainerComponent implements OnInit {
   addCard() {
     this.container.addCard(new Card('New Card', 'New Content'));
   }
+
+  hide() {
+    this.container.hide();
+  }
 }

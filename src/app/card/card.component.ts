@@ -19,4 +19,12 @@ export class CardComponent implements OnInit {
     container.addCard(new Card('New Card', 'New Content'));
     this.card.addContainer(container);
   }
+
+  hide() {
+    this.card.hide();
+  }
+
+  isAnyContainerVisible(containers: Container[]) {
+    return containers.some(f => f.visible);
+  }
 }
