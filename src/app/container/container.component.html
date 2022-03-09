@@ -12,7 +12,11 @@
     </button>
   </div>
   <as-split class="flex-fill" *ngIf="container.cards">
-    <as-split-area *ngFor="let card of container.cards" [size]="card.width" [visible]="card.visible">
+    <as-split-area
+      *ngFor="let card of container.cards"
+      [size]="card.width"
+      [visible]="card.visible"
+    >
       <app-card [card]="card"></app-card>
     </as-split-area>
   </as-split>

@@ -25,6 +25,6 @@ export class CardComponent implements OnInit {
   }
 
   isAnyContainerVisible(containers: Container[]) {
-    return containers.some(f => f.visible);
+    return containers.some((f) => f.visible);
   }
 }

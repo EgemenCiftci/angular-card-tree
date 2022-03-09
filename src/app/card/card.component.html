@@ -1,5 +1,9 @@
 <as-split class="border" direction="vertical">
-  <as-split-area class="d-flex flex-column" [size]="card.height" [visible]="card.headerVisible || card.contentVisible">
+  <as-split-area
+    class="d-flex flex-column"
+    [size]="card.height"
+    [visible]="card.headerVisible || card.contentVisible"
+  >
     <div class="text-secondary d-flex bg-blue text-white" style="height:30px">
       <span class="flex-fill">{{ card.label }}</span>
       <button (click)="addContainer()" title="Add Container">+</button>
@@ -21,7 +25,10 @@
       {{ card.content }}
     </div>
   </as-split-area>
-  <as-split-area *ngIf="card.containers" [visible]="isAnyContainerVisible(card.containers)">
+  <as-split-area
+    *ngIf="card.containers"
+    [visible]="isAnyContainerVisible(card.containers)"
+  >
     <as-split>
       <as-split-area
         *ngFor="let container of card.containers"
